@@ -13,7 +13,7 @@ function App() {
         imagePosition="right"
         darkBackground={true}
         showGrowingCabinet={false}
-        productImage="/image1 (4).jpg"
+        productImage={`${process.env.PUBLIC_URL}/image4.jpg`}
       />
       <ProductSection 
         title="AI-POWERED PRECISION GROWING"
@@ -21,7 +21,7 @@ function App() {
         imagePosition="left"
         darkBackground={false}
         showGrowingCabinet={false}
-        productImage="/image1 (2).jpg"
+        productImage={`${process.env.PUBLIC_URL}/image2.jpg`}
       />
       <ProductSection 
         title="SPACE-OPTIMIZED FOR MODERN LIVING"
@@ -29,7 +29,7 @@ function App() {
         imagePosition="right"
         darkBackground={true}
         showGrowingCabinet={false}
-        productImage="/image1 (3).jpg"
+        productImage={`${process.env.PUBLIC_URL}/image3.jpg`}
       />
       <Footer />
     </div>

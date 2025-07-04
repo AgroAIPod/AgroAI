@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
         </div>
         <div className="hero-image">
           <div className="agroai-showcase">
-            <img src="/image1 (1).jpg" alt="AgroAIPod System" className="hero-product-image" />
+            <img src={`${process.env.PUBLIC_URL}/image1.jpg`} alt="AgroAIPod System" className="hero-product-image" />
             <div className="floating-features">
               <div className="feature-badge">AI Monitoring</div>
               <div className="feature-badge">Zero Effort</div>
