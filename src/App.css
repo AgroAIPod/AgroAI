@@ -48,3 +48,33 @@ html {
 .fade-in {
   animation: fadeIn 0.6s ease-out;
 }
+
+/* Prevent body scroll when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+/* Improve touch targets for mobile */
+@media (hover: none) {
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

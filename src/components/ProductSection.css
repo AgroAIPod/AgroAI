@@ -363,11 +363,34 @@
   transform: scale(1.03);
 }
 
+@media (max-width: 1024px) {
+  .product-section {
+    padding: 5rem 0;
+  }
+  
+  .product-container {
+    padding: 0 1.5rem;
+  }
+  
+  .product-content {
+    gap: 3rem;
+  }
+  
+  .product-title {
+    font-size: 2.2rem;
+  }
+  
+  .product-description {
+    font-size: 1.05rem;
+  }
+}
+
 @media (max-width: 968px) {
   .product-content {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+    min-height: auto;
   }
   
   .product-content.reverse {
@@ -376,6 +399,16 @@
   
   .product-title {
     font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .product-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .product-image-container {
+    height: 400px;
   }
   
   .growing-cabinet {
@@ -392,6 +425,11 @@
     width: 400px;
     height: 400px;
   }
+  
+  .section-product-image {
+    max-width: 400px;
+    max-height: 400px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -403,16 +441,109 @@
     padding: 0 1rem;
   }
   
+  .product-content {
+    gap: 1.5rem;
+  }
+  
   .product-text {
     padding: 1rem;
   }
   
   .product-title {
     font-size: 1.8rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+  }
+  
+  .product-description {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .product-image-container {
+    height: 300px;
   }
 
   .product-real-image {
     width: 300px;
     height: 300px;
+  }
+  
+  .section-product-image {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  
+  .growing-cabinet {
+    width: 250px;
+    height: 320px;
+  }
+  
+  .bottle-mockup {
+    width: 180px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-section {
+    padding: 3rem 0;
+  }
+  
+  .product-container {
+    padding: 0 0.75rem;
+  }
+  
+  .product-content {
+    gap: 1rem;
+  }
+  
+  .product-text {
+    padding: 0.5rem;
+  }
+  
+  .product-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .product-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .product-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+    border-radius: 30px;
+  }
+  
+  .product-image-container {
+    height: 250px;
+  }
+
+  .product-real-image {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .section-product-image {
+    max-width: 250px;
+    max-height: 250px;
+  }
+  
+  .growing-cabinet {
+    width: 200px;
+    height: 260px;
+  }
+  
+  .bottle-mockup {
+    width: 150px;
+    height: 240px;
   }
 }

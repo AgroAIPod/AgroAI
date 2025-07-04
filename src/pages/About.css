@@ -181,9 +181,47 @@
   opacity: 0.9;
 }
 
+@media (max-width: 1024px) {
+  .about-page {
+    padding: 100px 15px 60px;
+  }
+  
+  .about-content {
+    gap: 50px;
+  }
+  
+  .mission-section,
+  .team-section {
+    padding: 40px;
+  }
+  
+  .values-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+  }
+}
+
 @media (max-width: 768px) {
+  .about-page {
+    padding: 100px 15px 60px;
+  }
+  
   .about-hero h1 {
     font-size: 2.5rem;
+  }
+  
+  .about-hero p {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+  
+  .about-content {
+    gap: 40px;
   }
   
   .mission-section,
@@ -191,12 +229,123 @@
     padding: 30px;
   }
   
+  .mission-section h2,
+  .team-section h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+  
+  .mission-section p {
+    font-size: 1.1rem;
+  }
+  
   .values-grid,
   .team-grid {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .value-card {
+    padding: 30px;
+  }
+  
+  .value-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .stats-section {
+    padding: 40px 30px;
   }
   
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+  
+  .stat-item p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    padding: 90px 10px 50px;
+  }
+  
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .about-hero p {
+    font-size: 1rem;
+  }
+  
+  .mission-section,
+  .team-section {
+    padding: 25px;
+  }
+  
+  .mission-section h2,
+  .team-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .mission-section p {
+    font-size: 1rem;
+  }
+  
+  .value-card {
+    padding: 25px;
+  }
+  
+  .value-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.6rem;
+  }
+  
+  .value-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .value-card p {
+    font-size: 0.95rem;
+  }
+  
+  .member-photo {
+    width: 120px;
+    height: 120px;
+    font-size: 2.5rem;
+  }
+  
+  .team-member h4 {
+    font-size: 1.2rem;
+  }
+  
+  .team-member p {
+    font-size: 0.85rem;
+  }
+  
+  .stats-section {
+    padding: 30px 20px;
+  }
+  
+  .stats-grid {
+    gap: 20px;
+  }
+  
+  .stat-item h3 {
+    font-size: 1.8rem;
+  }
+  
+  .stat-item p {
+    font-size: 0.9rem;
   }
 }
