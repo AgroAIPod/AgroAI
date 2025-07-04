@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AgroAI/static/css/main.24b0e04a.css",
+    "main.js": "/AgroAI/static/js/main.6248a57e.js",
+    "static/js/453.a6c31089.chunk.js": "/AgroAI/static/js/453.a6c31089.chunk.js",
+    "index.html": "/AgroAI/index.html",
+    "main.24b0e04a.css.map": "/AgroAI/static/css/main.24b0e04a.css.map",
+    "main.6248a57e.js.map": "/AgroAI/static/js/main.6248a57e.js.map",
+    "453.a6c31089.chunk.js.map": "/AgroAI/static/js/453.a6c31089.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24b0e04a.css",
+    "static/js/main.6248a57e.js"
+  ]
+}
