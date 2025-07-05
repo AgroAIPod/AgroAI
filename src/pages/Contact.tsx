@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { emailConfig } from '../config/emailConfig';
 import './Contact.css';
 
 const Contact: React.FC = () => {
@@ -8,6 +10,7 @@ const Contact: React.FC = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -16,12 +19,33 @@ const Contact: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We\'ll get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      // EmailJS configuration from config file
+      const { serviceId, templateId, publicKey, toEmail } = emailConfig;
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        to_email: toEmail,
+        subject: formData.subject,
+        message: formData.message,
+        reply_to: formData.email,
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      alert('Thank you for your message! We\'ll get back to you soon.');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Sorry, there was an error sending your message. Please try again..');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -91,8 +115,8 @@ const Contact: React.FC = () => {
               />
             </div>
 
-            <button type="submit" className="submit-btn">
-              Send Message
+            <button type="submit" className="submit-btn" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
@@ -104,18 +128,18 @@ const Contact: React.FC = () => {
             <div className="info-card">
               <h3>📧 Email Us</h3>
               <p>
-                General Inquiries: info@agroaipod.com<br/>
-                Support: support@agroaipod.com<br/>
-                Press: media@agroaipod.com
+                General Inquiries: jithinjose2025@gmail.com<br/>
+                {/* Support: support@agroaipod.com<br/>
+                Press: media@agroaipod.com */}
               </p>
             </div>
 
             <div className="info-card">
               <h3>📞 Call Us</h3>
               <p>
-                Sales: +1 (555) 123-4567<br/>
-                Support: +1 (555) 234-5678<br/>
-                Toll-free: 1-800-AGROAI
+                {/* Sales: +1 (555) 123-4567<br/> */}
+                Support: +91 8111875561<br/>
+                {/* Toll-free: 1-800-AGROAI */}
               </p>
             </div>
 
@@ -123,14 +147,14 @@ const Contact: React.FC = () => {
               <h3>📍 Visit Us</h3>
               <p>
                 AgroAI Headquarters<br/>
-                123 Innovation Drive<br/>
-                Silicon Valley, CA 94105<br/>
-                United States
+                Kerala , India<br/>
+                {/* Silicon Valley, CA 94105<br/>
+                United States */}
               </p>
             </div>
           </div>
 
-          <div className="office-hours">
+          {/* <div className="office-hours">
             <h3>⏰ Office Hours</h3>
             <ul className="hours-list">
               <li>
@@ -146,9 +170,9 @@ const Contact: React.FC = () => {
                 <span>Closed</span>
               </li>
             </ul>
-          </div>
+          </div> */}
 
-          <div className="social-links">
+          {/* <div className="social-links">
             <a href="https://twitter.com/agroaipod" className="social-link" aria-label="Twitter">
               🐦
             </a>
@@ -164,7 +188,7 @@ const Contact: React.FC = () => {
             <a href="https://youtube.com/agroaipod" className="social-link" aria-label="YouTube">
               📺
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

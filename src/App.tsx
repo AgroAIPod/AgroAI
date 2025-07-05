@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { Header, Footer } from './components';
+import { Header, Footer, ScrollToTop } from './components';
 import { Home, Technology, About, Contact } from './pages';
 
 function App() {
   return (
     <Router basename="/AgroAI">
+      <ScrollToTop />
       <div className="App">
         <Header />
         <Routes>

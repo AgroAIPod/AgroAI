@@ -101,6 +101,17 @@
   box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
 }
 
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submit-btn:disabled:hover {
+  transform: none;
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
 .contact-info {
   color: white;
 }

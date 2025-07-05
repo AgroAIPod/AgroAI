@@ -17,6 +17,7 @@ const About: React.FC = () => {
             Our mission is to democratize agriculture by bringing intelligent, automated growing systems 
             into every home. We're committed to reducing food miles, eliminating pesticides, and empowering 
             individuals to take control of their food production through cutting-edge AI technology.
+            <span className="development-status">Currently in active development, we're transforming this innovative concept into reality.</span>
           </p>
         </div>
 
@@ -53,13 +54,15 @@ const About: React.FC = () => {
           <h2>Meet Our Team</h2>
           <div className="team-grid">
             <div className="team-member">
-              <div className="member-photo">👨‍💻</div>
-              <h4>Alex Chen</h4>
-              <p className="role">CEO & Co-Founder</p>
-              <p>Former Tesla engineer with 10+ years in AI and robotics. Passionate about sustainable technology and urban farming.</p>
+              <div className="member-photo">
+                <img src={`${process.env.PUBLIC_URL}/o.jpg`} alt="Jithin Jose" />
+              </div>
+              <h4>Jithin Jose</h4>
+              <p className="role">CEO & Founder</p>
+              <p>Software engineer with 4+ years in AI and Development. Passionate about sustainable technology and urban farming.</p>
             </div>
 
-            <div className="team-member">
+            {/* <div className="team-member">
               <div className="member-photo">👩‍🔬</div>
               <h4>Dr. Sarah Martinez</h4>
               <p className="role">CTO & Co-Founder</p>
@@ -78,11 +81,11 @@ const About: React.FC = () => {
               <h4>Maya Patel</h4>
               <p className="role">Lead AI Engineer</p>
               <p>Former Google AI researcher specializing in computer vision and machine learning for agricultural applications.</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
-        <div className="stats-section">
+        {/* <div className="stats-section">
           <h2>Our Impact</h2>
           <div className="stats-grid">
             <div className="stat-item">
@@ -102,7 +105,7 @@ const About: React.FC = () => {
               <p>Countries Served</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

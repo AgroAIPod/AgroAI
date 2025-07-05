@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ProductSection.css';
 
 interface ProductSectionProps {
@@ -18,6 +19,13 @@ const ProductSection: React.FC<ProductSectionProps> = ({
   showGrowingCabinet = false,
   productImage
 }) => {
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    navigate('/technology');
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section className={`product-section ${darkBackground ? 'dark' : 'light'}`}>
       <div className="product-container">
@@ -25,7 +33,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({
           <div className="product-text">
             <h2 className="product-title">{title}</h2>
             <p className="product-description">{description}</p>
-            <button className="product-button">Learn More</button>
+            <button className="product-button" onClick={handleLearnMoreClick}>Learn More</button>
           </div>
           <div className="product-image-container">
             {showGrowingCabinet ? (

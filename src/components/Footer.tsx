@@ -1,7 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer: React.FC = () => {
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -9,10 +14,10 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h3 className="footer-title">TECHNOLOGY</h3>
             <ul className="footer-links">
-              <li><a href="#ai">AI & Machine Learning</a></li>
-              <li><a href="#sensors">Sensor Technology</a></li>
-              <li><a href="#hydroponics">Hydroponic Systems</a></li>
-              <li><a href="#automation">Automation Features</a></li>
+              <li><Link to="/technology" onClick={handleLinkClick}>AI & Machine Learning</Link></li>
+              <li><Link to="/technology" onClick={handleLinkClick}>Sensor Technology</Link></li>
+              <li><Link to="/technology" onClick={handleLinkClick}>Hydroponic Systems</Link></li>
+              <li><Link to="/technology" onClick={handleLinkClick}>Automation Features</Link></li>
             </ul>
           </div>
           
@@ -20,16 +25,16 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h3 className="footer-title">COMPANY</h3>
             <ul className="footer-links">
-              <li><a href="#about">About AgroAIPod</a></li>
-              <li><a href="#mission">Our Mission</a></li>
-              <li><a href="#research">Research & Development</a></li>
+              <li><Link to="/about" onClick={handleLinkClick}>About AgroAIPod</Link></li>
+              <li><Link to="/about" onClick={handleLinkClick}>Our Mission</Link></li>
+              <li><Link to="/about" onClick={handleLinkClick}>Research & Development</Link></li>
             </ul>
           </div>
           
           <div className="footer-section">
             <h3 className="footer-title">SUPPORT</h3>
             <ul className="footer-links">
-              <li><a href="#contact">Contact Support</a></li>
+              <li><Link to="/contact" onClick={handleLinkClick}>Contact Support</Link></li>
             </ul>
           </div>
           

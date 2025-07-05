@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleDiscoverClick = () => {
+    navigate('/technology');
+    window.scrollTo(0, 0);
+  };
   return (
     <section className="hero">
       <div className="hero-container">
@@ -18,7 +25,7 @@ const Hero: React.FC = () => {
           <div className="hero-logo">
             <span className="hero-logo-text">AgroAIPod</span>
           </div>
-          <button className="hero-cta">Discover the Future</button>
+          <button className="hero-cta" onClick={handleDiscoverClick}>Discover the Future</button>
         </div>
         <div className="hero-image">
           <div className="agroai-showcase">

@@ -123,8 +123,8 @@
 }
 
 .member-photo {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   background: linear-gradient(135deg, #667eea, #764ba2);
   margin: 0 auto 20px;
@@ -134,6 +134,14 @@
   font-size: 3rem;
   color: white;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .team-member h4 {
@@ -179,6 +187,13 @@
 .stat-item p {
   font-size: 1.1rem;
   opacity: 0.9;
+}
+
+/* Development status styling */
+.development-status {
+  color: #e74c3c;
+  font-weight: 600;
+  font-style: italic;
 }
 
 @media (max-width: 1024px) {
@@ -323,6 +338,13 @@
     width: 120px;
     height: 120px;
     font-size: 2.5rem;
+  }
+  
+  .member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
   
   .team-member h4 {
