@@ -90,6 +90,13 @@ const Header: React.FC = () => {
             About
           </Link>
           <Link 
+            to="/gallery" 
+            className={`nav-link ${location.pathname === '/gallery' ? 'active' : ''}`}
+            onClick={closeMenu}
+          >
+            Gallery
+          </Link>
+          <Link 
             to="/contact" 
             className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
             onClick={closeMenu}

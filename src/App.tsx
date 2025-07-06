@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { Header, Footer, ScrollToTop } from './components';
-import { Home, Technology, About, Contact } from './pages';
+import { Home, Technology, About, Contact, Gallery } from './pages';
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Route path="/technology" element={<Technology />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
         <Footer />
       </div>
