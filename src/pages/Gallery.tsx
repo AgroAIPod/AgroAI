@@ -66,8 +66,7 @@ const Gallery: React.FC = () => {
               className="gallery-item"
               onClick={() => openModal(image)}
             >
-              <img src={image.src}  />
-              {/* alt={image.alt} */}
+              <img src={image.src} alt={`Gallery image ${index + 1}`} />
               <div className="gallery-overlay">
                 {/* <h3>{image.title}</h3> */}
                 <p>Click to view</p>
@@ -82,8 +81,7 @@ const Gallery: React.FC = () => {
               <button className="modal-close" onClick={closeModal}>
                 ×
               </button>
-              <img src={selectedImage.src}  /> 
-              {/* alt={selectedImage.alt} */}
+              <img src={selectedImage.src} alt="Selected gallery image" />
               <div className="modal-info">
                 {/* <h2>{selectedImage.title}</h2>
                 <p>{selectedImage.alt}</p> */}
